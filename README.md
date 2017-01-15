@@ -11,7 +11,7 @@ and others.
 
 To convert an ID number to a word:
 
-```
+```scala
 SylCode.bigIntToSyllableString(BigInt(34873925))
 ```
 
@@ -19,7 +19,7 @@ will give you coded ID `sixaaneefu`.
 
 If there's a need, you can decode it back to BigInt:
 
-```
+```scala
 SylCode.syllableStringToBigInt("sixaaneefu")
 ```
 
