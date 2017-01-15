@@ -1,8 +1,8 @@
 # SylCode
 
 SylCode is a small piece of Scala code for presenting ID numbers
-as pronouncable "words", combinations of syllables, consisting of
-a consonant and one or two vovels.
+as pronounceable "words", combinations of syllables, consisting of
+a consonant and one or two vowels.
 
 SylCode is inspired by https://github.com/heharkon/readable-hash project
 and others.
