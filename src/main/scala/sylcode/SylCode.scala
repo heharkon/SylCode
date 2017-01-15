@@ -38,7 +38,7 @@ object SylCode {
           listToBigIntList(rest, charsToByte(List(c, v1)) :: acc)
 
         case Nil => acc
-        case _ => throw new IllegalArgumentException("arg 1 was wrong...")
+        case _ => throw new IllegalArgumentException("Couldn't decode string.")
       }
     }
 
