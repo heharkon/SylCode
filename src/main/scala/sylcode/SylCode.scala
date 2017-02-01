@@ -27,14 +27,15 @@ object SylCode {
       syllables.indexOf(s).toByte
     }
 
+    def isConsonant(c: Char) = consonants.contains(c)
+    def isVowel(v: Char) = vowels.contains(v)
+
     def listToBigIntList(input: List[Char], acc: List[Byte] = List()): List[Byte] = {
       input match {
-        case c :: v1 :: v2 :: rest
-          if consonants.contains(c) && vowels.contains(v1) && vowels.contains(v2) =>
+        case c :: v1 :: v2 :: rest if isConsonant(c) && isVowel(v1) && isVowel(v2) =>
           listToBigIntList(rest, charsToByte(List(c, v1, v2)) :: acc)
 
-        case c :: v1 :: rest
-          if consonants.contains(c) && vowels.contains(v1) =>
+        case c :: v1 :: rest if isConsonant(c) && isVowel(v1) =>
           listToBigIntList(rest, charsToByte(List(c, v1)) :: acc)
 
         case Nil => acc
